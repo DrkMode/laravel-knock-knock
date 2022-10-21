@@ -1,0 +1,27 @@
+{
+    "name": "drkmode/laravel-knock-knock",
+    "description": "Protect your site with a simple password form",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DrkMode",
+            "email": "dev@drkmode.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "DrkMode\\SiteProtection\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DrkMode\\SiteProtection\\SiteProtectionServiceProvider"
+            ]
+        }
+    }
+}
