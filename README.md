@@ -1,5 +1,8 @@
 # Very simple site wide password protection for Laravel
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/drkmode/laravel-knock-knock.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
+[![Total Downloads](https://img.shields.io/packagist/dt/drkmode/laravel-knock-knock.svg?style=flat-square)](https://packagist.org/packages/drkmode/filament-redirects)
+
 This will add a simple password form in front of your application to protected it
 from any access. The password is specified using the `.env` file to protect DEV
 or STAGE sites only.
@@ -11,7 +14,7 @@ This does not protect any assets files like css or images.
 
 __Looks like__
 
-![SiteProtection](https://raw.githubusercontent.com/DrkMode/laravel-knock-knock/master/preview.png)
+![SiteProtection](https://raw.githubusercontent.com/DrkMode/laravel-knock-knock/main/preview.jpg)
 
 ## Installation
 
@@ -89,6 +92,14 @@ basic alignments.
 
 ```
 SITE_PROTECTION_CSS_FILE_URI=/assets/app.css
+```
+
+#### Set a Logo file path
+
+You can add your own company or project logo by setting this `.env` variable to the path of the image.
+
+```
+SITE_PROTECTION_LOGO_PATH=/assets/logo.png
 ```
 
 ### Customization
