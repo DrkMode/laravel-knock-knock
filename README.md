@@ -3,9 +3,9 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/drkmode/laravel-knock-knock.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
 [![Total Downloads](https://img.shields.io/packagist/dt/drkmode/laravel-knock-knock.svg?style=flat-square)](https://packagist.org/packages/drkmode/filament-redirects)
 
-This will add a simple password form in front of your application to protected it
-from any access. The password is specified using the `.env` file to protect DEV
-or STAGE sites only.
+This will add a simple password form in front of your application to protected it from any access. The password is
+specified using the `.env` file to protect your sites, commonly used for DEV or STAGE sites. You can use multiple
+passwords for different user groups. Once the password is removed, the access is revoked.
 
 You can use multiple passwords for different user groups. Once the password is
 removed, the access is revoked.
@@ -53,7 +53,7 @@ protected $middlewareGroups = [
 ### Configuration
 
 Most configuration can be done using ENV variables by adding the following keys
-to your `.env` file. 
+to your `.env` file.
 
 #### Adjusting the passwords
 
@@ -87,7 +87,7 @@ SITE_PROTECTION_PROTECTED_ONLY_PATHS=path1,path2,admin*
 #### Set a CSS file uri
 
 You can change the look and feel of the password protection page by adding an uri
-to your main css file. The css file is appened to the existing css styles to keep 
+to your main css file. The css file is appened to the existing css styles to keep
 basic alignments.
 
 ```
@@ -104,7 +104,7 @@ SITE_PROTECTION_LOGO_PATH=/assets/logo.png
 
 ### Customization
 
-In case you really need to. You can modify the view that handles password entry by publishing the views to your 
+In case you really need to. You can modify the view that handles password entry by publishing the views to your
 resource folder. This is not recommended and might cause problems on future updates. Try using the uri to a css
 file first.
 
