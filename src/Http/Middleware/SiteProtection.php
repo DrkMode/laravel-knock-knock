@@ -29,13 +29,13 @@ class SiteProtection
 
         $passwords = explode(',', $password);
 
-        if (in_array($request->get('site-password-protected'), $passwords)) {
-            setcookie('site-password-protected', encrypt($request->get('site-password-protected')), 0, '/');
+        if (in_array($request->get('password'), $passwords)) {
+            setcookie('password', encrypt($request->get('password')), 0, '/');
             return redirect($request->url());
         }
 
         try {
-            $usersPassword = decrypt(Arr::get($_COOKIE, 'site-password-protected'));
+            $usersPassword = decrypt(Arr::get($_COOKIE, 'password'));
             if (in_array($usersPassword, $passwords)) {
                 return $next($request);
             }

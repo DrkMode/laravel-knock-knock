@@ -90,8 +90,8 @@
 
             <div class="form-group">
 
-                <input type="password" name="site-password-protected" placeholder="Please enter password" class="form-control" tabindex="1" autofocus />
-                @if (Request::get('site-password-protected'))
+                <input type="password" name="password" placeholder="Please enter password" class="form-control" tabindex="1" autofocus />
+                @if (Request::get('password'))
                     <div class="text-danger">Password is wrong</div>
                 @else
                     <div class="small help-block">And press enter</div>
