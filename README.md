@@ -50,6 +50,21 @@ protected $middlewareGroups = [
 ];
 ```
 
+### Laravel >= 11
+
+### Add Middleware
+
+Add Middleware to `bootstrap/app.php` or specific routes you want to protect.
+
+```
+->withMiddleware(function (Middleware $middleware) {
+        $middleware->web(append: [
+            ...
+            \DrkMode\SiteProtection\Http\Middleware\SiteProtection::class,
+        ]);
+    })
+```
+
 ### Configuration
 
 Most configuration can be done using ENV variables by adding the following keys
